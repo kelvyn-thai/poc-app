@@ -8,7 +8,6 @@ import { useAccountStore } from "zustand-store/account";
 import { getOrganizationState } from "zustand-store/organization";
 import { useRoutesStore } from "zustand-store/routes";
 import ErrorBoundary from "components/core/ErrorBoundary";
-import { ENV } from "env";
 import styles from "styles/App.module.scss";
 import ModalAntd from "components/antd/Modal";
 import Modal from "components/core/Modal";
