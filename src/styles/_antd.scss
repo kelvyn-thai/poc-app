@@ -1,0 +1,175 @@
+@import "variables";
+
+:global {
+  .ant-btn {
+    span {
+      font-weight: 500;
+    }
+  }
+  .ant-table {
+    .ant-table-thead th.ant-table-column-has-sorters:hover,
+    .ant-table-thead > tr > th {
+      background-color: $primary-dark-300;
+      color: $primary-dark-400;
+      border-bottom: 1px solid $primary-dark-700;
+    }
+    .ant-table-tbody > tr > td {
+      background-color: $primary-dark-500;
+      font-size: 14px;
+      font-weight: 400;
+      color: #fff;
+      border-bottom: 1px solid $primary-dark-700;
+    }
+    .ant-table-tbody > tr.ant-table-row:hover > td,
+    .ant-table-tbody > tr > td.ant-table-cell-row-hover {
+      background-color: $primary-dark-600;
+    }
+    .ant-table-tbody > tr.ant-table-placeholder:hover > td {
+      background-color: $primary-dark-500;
+    }
+    .ant-empty-description {
+      color: #fff;
+    }
+  }
+
+  .ant-pagination-next,
+  .ant-pagination-prev,
+  .ant-pagination-item,
+  .ant-pagination-total-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ant-pagination-total-text {
+    color: $primary-dark-800;
+  }
+  .ant-pagination-jump-next,
+  .ant-pagination-jump-prev {
+    color: #fff;
+  }
+  .ant-pagination .ant-pagination-item {
+    background-color: transparent;
+    border-radius: 50%;
+    color: #fff;
+    border: none;
+    &.ant-pagination-item-active {
+      background-color: #1890ff;
+      display: initial;
+      border: solid 1px #1890ff;
+    }
+  }
+  .anticon {
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 400;
+    color: #fff;
+    :hover {
+      font-weight: 500;
+      color: #fff;
+    }
+  }
+  .ant-pagination-options {
+    position: absolute;
+    right: 0;
+  }
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    background-color: transparent;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 8px;
+  }
+  .ant-tree .ant-tree-treenode,
+  .ant-tree-node-content-wrapper {
+    width: 100%;
+  }
+
+  .ant-tree .ant-tree-switcher {
+    display: none;
+  }
+  .ant-tree .ant-tree-treenode {
+    background-color: transparent;
+  }
+  .ant-tree-title-container:hover {
+    background-color: $primary-dark-700;
+  }
+  .ant-tree .ant-tree-node-content-wrapper {
+    background: none !important;
+    padding: 0;
+  }
+
+  .ant-tree
+    .ant-tree-node-content-wrapper:hover
+    .ant-tree-node-content-wrapper:active,
+  .ant-tree-node-content-wrapper:focus {
+    background-color: $primary-dark-700;
+    .ant-tree-title-text {
+      color: #fff !important;
+    }
+  }
+  .ant-tree-list-holder-inner {
+    background-color: $primary-dark-900;
+  }
+  .ant-btn-primary[disabled],
+  .ant-btn-primary[disabled]:active,
+  .ant-btn-primary[disabled]:focus,
+  .ant-btn-primary[disabled]:hover {
+    background-color: $primary-dark-1100;
+    border: $primary-dark-1100;
+    color: $primary-dark-400;
+  }
+  .ant-btn-actived {
+    background-color: rgb(34, 197, 94) !important;
+    border: rgb(34, 197, 94) !important;
+    color: #fff !important;
+  }
+  .ant-btn-actived:active,
+  .ant-btn-actived:focus,
+  .ant-btn-actived:hover {
+    background-color: rgb(74, 222, 128) !important;
+    border: rgb(74, 222, 128) !important;
+    color: #fff !important;
+  }
+
+  .ant-form-item-label > label {
+    color: #fff;
+  }
+  .ant-input-number {
+    width: 100%;
+  }
+  .ant-space {
+    width: 100%;
+  }
+
+  .ant-select {
+    background-color: $custom-gray-100;
+  }
+  .ant-select .ant-select-selection-item {
+    color: #000;
+    font-weight: 500;
+  }
+
+  .ant-select .ant-select-arrow .anticon {
+    color: $custom-gray-200;
+    font-size: 16px;
+  }
+  .ant-divider {
+    background-color: $primary-dark-400 !important;
+  }
+  .ant-statistic .ant-statistic-title {
+    color: $primary-dark-400;
+  }
+  .ant-statistic .ant-statistic-content-value {
+    color: #fff;
+  }
+  .ant-card {
+    background-color: transparent !important;
+  }
+  .ant-menu {
+    background-color: transparent;
+    border: none;
+  }
+  .ant-menu .ant-menu-item a {
+    color: #1890ff;
+  }
+}

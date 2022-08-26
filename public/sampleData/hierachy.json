@@ -1,0 +1,32 @@
+{
+  "geometry": "vngeometry.json",
+  "id": "vngeometry",
+  "name": "Viet Name",
+  "useAssetPath": true,
+  "children": [
+    {
+      "id": "vietnam-bariavtaubariavungtau",
+      "geometry": "brvtgeometry.json",
+      "children": [],
+      "name": "Ba Ria Vung Tau",
+      "nameProperty": "NAME_3",
+      "useAssetPath": true
+    },
+    {
+      "id": "vietnam-hochiminhcityhochiminh",
+      "geometry": "hcmgeometry.json",
+      "children": [],
+      "name": "TP HCM",
+      "nameProperty": "NAME_3",
+      "useAssetPath": true
+    },
+    {
+      "id": "vietnam-hanoicityhanoi",
+      "geometry": "hanoigeometry.json",
+      "children": [],
+      "name": "Ha Noi",
+      "nameProperty": "NAME_3",
+      "useAssetPath": true
+    }
+  ]
+}

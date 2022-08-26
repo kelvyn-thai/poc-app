@@ -1,0 +1,40 @@
+@import "styles/variables";
+
+.antdModal {
+  :global {
+    .ant-modal-content {
+      background-color: $primary-dark-100;
+    }
+    .ant-modal-header {
+      background-color: inherit;
+    }
+    .ant-modal-body {
+      background-color: inherit;
+    }
+    .ant-upload {
+      background-color: inherit;
+    }
+    .ant-upload-list-item {
+      .ant-upload-text-icon {
+        display: flex;
+      }
+      .ant-upload-list-item-name {
+        color: #fff;
+      }
+      span.anticon {
+        > svg {
+          fill: #fff;
+        }
+      }
+    }
+
+    .ant-upload-list-item:hover .ant-upload-list-item-info {
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+}
+
+.title {
+  color: "red";
+}

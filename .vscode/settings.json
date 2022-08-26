@@ -1,6 +1,11 @@
 {
-    "tailwindCSS.includeLanguages": {
-        "javascript": "javascript",
-        "html": "HTML"
-    },
+  "scss.lint.unknownAtRules": "ignore",
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "html": "HTML"
+  },
+  "cSpell.words": [
+    "countrystatuslist",
+    "densisty"
+  ]
 }

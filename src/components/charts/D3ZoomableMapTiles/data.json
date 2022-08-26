@@ -1,0 +1,13 @@
+{
+  "points": [
+    {
+      "id": "point1",
+      "name": "pointname1",
+      "type": "point",
+      "color": "#234323",
+      "position": [103.887903, 1.300781],
+      "attributes": "project1;starting from 2019;Serial12313;Alert:None"
+    }
+  ],
+  "scaleRatio": 22
+}

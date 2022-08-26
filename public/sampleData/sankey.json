@@ -1,0 +1,261 @@
+{
+  "nodes": [
+    {
+      "name": "KASA"
+    },
+    {
+      "name": "Scope 1"
+    },
+    {
+      "name": "Scope 2"
+    },
+    {
+      "name": "MINISTRY"
+    },
+    {
+      "name": "JPS"
+    },
+    {
+      "name": "JAS"
+    },
+    {
+      "name": "BBA"
+    },
+    {
+      "name": "MET"
+    },
+    {
+      "name": "JPP"
+    },
+    {
+      "name": "NAHRIM"
+    },
+    {
+      "name": "JBK"
+    },
+    {
+      "name": "SPAN"
+    },
+    {
+      "name": "IWK"
+    },
+    {
+      "name": "PAAB"
+    },
+    {
+      "name": "MGTC"
+    },
+    {
+      "name": "YPASM"
+    },
+    {
+      "name": "Petrol"
+    },
+    {
+      "name": "Electricity"
+    },
+    {
+      "name": "Diesel"
+    },
+    {
+      "name": "Electricity (EV)"
+    }
+  ],
+  "links": [
+    {
+      "source": "MINISTRY",
+      "target": "Petrol",
+      "value": 65625.24024
+    },
+    {
+      "source": "MINISTRY",
+      "target": "Electricity",
+      "value": 1068384.915
+    },
+    {
+      "source": "JPS",
+      "target": "Petrol",
+      "value": 92110.29181275
+    },
+    {
+      "source": "JPS",
+      "target": "Diesel",
+      "value": 36242.923528485
+    },
+    {
+      "source": "JAS",
+      "target": "Petrol",
+      "value": 613758.36759
+    },
+    {
+      "source": "JAS",
+      "target": "Diesel",
+      "value": 121813.54809075
+    },
+    {
+      "source": "BBA",
+      "target": "Petrol",
+      "value": 11815.68075
+    },
+    {
+      "source": "MET",
+      "target": "Petrol",
+      "value": 29614.9794
+    },
+    {
+      "source": "JPP",
+      "target": "Petrol",
+      "value": 1921.89375
+    },
+    {
+      "source": "NAHRIM",
+      "target": "Petrol",
+      "value": 11826.663
+    },
+    {
+      "source": "NAHRIM",
+      "target": "Electricity",
+      "value": 896463.945
+    },
+    {
+      "source": "JBK",
+      "target": "Petrol",
+      "value": 1674.6711
+    },
+    {
+      "source": "SPAN",
+      "target": "Petrol",
+      "value": 62622.131775
+    },
+    {
+      "source": "SPAN",
+      "target": "Diesel",
+      "value": 12605.632641
+    },
+    {
+      "source": "SPAN",
+      "target": "Electricity",
+      "value": 896463.945
+    },
+    {
+      "source": "IWK",
+      "target": "Petrol",
+      "value": 381940.080375
+    },
+    {
+      "source": "IWK",
+      "target": "Diesel",
+      "value": 2346931.53669127
+    },
+    {
+      "source": "PAAB",
+      "target": "Petrol",
+      "value": 10226.1831
+    },
+    {
+      "source": "MGTC",
+      "target": "Petrol",
+      "value": 1995.8409
+    },
+    {
+      "source": "MGTC",
+      "target": "Electricity (EV)",
+      "value": 52.0128
+    },
+    {
+      "source": "MGTC",
+      "target": "Electricity",
+      "value": 60369.075
+    },
+    {
+      "source": "YPASM",
+      "target": "Petrol",
+      "value": 5109.162345
+    },
+    {
+      "source": "Diesel",
+      "target": "Scope 1",
+      "value": 2517593.64
+    },
+    {
+      "source": "Electricity",
+      "target": "Scope 2",
+      "value": 2921681.88
+    },
+    {
+      "source": "Electricity (EV)",
+      "target": "Scope 1",
+      "value": 52.0128
+    },
+    {
+      "source": "Petrol",
+      "target": "Scope 1",
+      "value": 1290241.186
+    },
+    {
+      "source": "KASA",
+      "target": "MINISTRY",
+      "value": 1134010.155
+    },
+    {
+      "source": "KASA",
+      "target": "JPS",
+      "value": 128353.22
+    },
+    {
+      "source": "KASA",
+      "target": "JAS",
+      "value": 735571.92
+    },
+    {
+      "source": "KASA",
+      "target": "BBA",
+      "value": 11815.68075
+    },
+    {
+      "source": "KASA",
+      "target": "MET",
+      "value": 29614.9794
+    },
+    {
+      "source": "KASA",
+      "target": "JPP",
+      "value": 1921.89375
+    },
+    {
+      "source": "KASA",
+      "target": "NAHRIM",
+      "value": 908290.61
+    },
+    {
+      "source": "KASA",
+      "target": "JBK",
+      "value": 1674.6711
+    },
+    {
+      "source": "KASA",
+      "target": "SPAN",
+      "value": 971691.71
+    },
+    {
+      "source": "KASA",
+      "target": "IWK",
+      "value": 2728871.62
+    },
+    {
+      "source": "KASA",
+      "target": "PAAB",
+      "value": 10226.1831
+    },
+    {
+      "source": "KASA",
+      "target": "MGTC",
+      "value": 62416.93
+    },
+    {
+      "source": "KASA",
+      "target": "YPASM",
+      "value": 5109.162345
+    }
+  ]
+}

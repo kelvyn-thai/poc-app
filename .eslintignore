@@ -1,0 +1,7 @@
+*.d.ts
+node_modules
+dist
+coverage
+config
+deployment
+scripts
