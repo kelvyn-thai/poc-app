@@ -29,7 +29,7 @@ const FakeAppPortalFrame: React.FC<IProps> = ({ children }) => {
         icon={<MenuOutlined />}
         onClick={() => setShowSideBar(!showSideBar)}
       />
-      <React.Suspense fallback="Loading...">{children}</React.Suspense>
+      {children}
     </div>
   );
 };

@@ -1,4 +1,10 @@
-import { BrowserRouter, Routes, Route, PathRouteProps } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  PathRouteProps,
+  HashRouter,
+} from "react-router-dom";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import React from "react";
 import {
@@ -44,7 +50,7 @@ const PictorialBarPage = React.lazy(() => import("pages/pictorial_bar"));
 const ModalTestPage = React.lazy(() => import("pages/modal-test"));
 
 const allRoutes: PathRouteProps[] = [
-  { path: "/bubble_chart", element: <BubbleChartPage /> },
+  { path: "/bubble-chart", element: <BubbleChartPage /> },
   { path: "/sankey_chart", element: <SankeyChartPage /> },
   { path: "/hexbin_chart", element: <HexbinChartPage /> },
   { path: "/control_center", element: <ControlCenterPage /> },
@@ -55,7 +61,6 @@ const allRoutes: PathRouteProps[] = [
   { path: "/hierachy_map", element: <MapPage /> },
   { path: "/configuration_hierachy_data", element: <AntdConfigurationPage /> },
   { path: "/pictorial_bar", element: <PictorialBarPage /> },
-  { path: "/modal-test", element: <ModalTestPage /> },
 ];
 
 const AllRoutes = ({ routes }: { routes: PathRouteProps[] }) => (
@@ -67,8 +72,19 @@ const AllRoutes = ({ routes }: { routes: PathRouteProps[] }) => (
         element={<React.Suspense fallback="...">{element}</React.Suspense>}
       />
     ))}
+    <Route
+      key="/modal-test"
+      path="/modal-test"
+      element={
+        <React.Suspense fallback="...">
+          <ModalTestPage />
+        </React.Suspense>
+      }
+    />
   </Routes>
 );
+
+console.log("ENV", ENV);
 
 const App = () => {
   const { routes, actionSetRoutes: setRoutes } = useRoutesStore();
@@ -83,24 +99,6 @@ const App = () => {
     setPermissionList(app.permissions);
   };
   const handleLoadRoutes = React.useCallback(() => {
-    // const pagesContext: any = require.context(
-    //   "./pages/bubble-chart",
-    //   true,
-    //   /index.tsx/
-    // );
-    // const modules: PathRouteProps[] = pagesContext
-    //   .keys()
-    //   .map((filePath: string) => {
-    //     const element = pagesContext(filePath).default;
-    //     console.log(
-    //       "element",
-    //       element,
-    //       "isValidElement",
-    //       React.isValidElement(element)
-    //     );
-    //     return element;
-    //   });
-    // setRoutes(uniqBy(modules, (r) => r.path));
     setRoutes(allRoutes);
   }, []);
   React.useEffect(() => {
@@ -112,17 +110,13 @@ const App = () => {
       <div className={styles.appContainer}>
         <QueryClientProvider client={queryClient}>
           <ReactQueryDevtools initialIsOpen />
-          <BrowserRouter>
-            {IS_IN_APP_PORTAL ? (
+          <HashRouter>
+            <FakeAppPortalFrame>
               <AllRoutes routes={routes} />
-            ) : (
-              <FakeAppPortalFrame>
-                <AllRoutes routes={routes} />
-              </FakeAppPortalFrame>
-            )}
+            </FakeAppPortalFrame>
             <ModalAntd />
             <Modal />
-          </BrowserRouter>
+          </HashRouter>
         </QueryClientProvider>
       </div>
     </ErrorBoundary>
