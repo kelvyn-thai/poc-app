@@ -1,17 +1,7 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  PathRouteProps,
-  HashRouter,
-} from "react-router-dom";
+import { Routes, Route, PathRouteProps, HashRouter } from "react-router-dom";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import React from "react";
-import {
-  getAppInfo,
-  getUserInfo,
-  IS_IN_APP_PORTAL,
-} from "sdk/esb-app-portal-sdk";
+import { getAppInfo, getUserInfo } from "sdk/esb-app-portal-sdk";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import FakeAppPortalFrame from "components/core/FakeAppPortalFrame";
 import { useAccountStore } from "zustand-store/account";
