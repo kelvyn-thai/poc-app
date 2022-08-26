@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpoc_app=self.webpackChunkpoc_app||[]).push([[711,928],{7309:function(e,p,u){u.r(p);var a=u(7861),t=u(825),c=u(7770),n=function(){return(0,c.jsx)(t.DataResourceChart,{type:"bubble"})};p.default=a.memo(n)}}]);
+//# sourceMappingURL=711.45fe9cfc.chunk.js.map
