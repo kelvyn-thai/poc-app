@@ -100,7 +100,9 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "eslint": "eslint \"**/*.{ts,tsx}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
