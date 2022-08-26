@@ -51,6 +51,7 @@ const allRoutes: PathRouteProps[] = [
   { path: "/hierachy_map", element: <MapPage /> },
   { path: "/configuration_hierachy_data", element: <AntdConfigurationPage /> },
   { path: "/pictorial_bar", element: <PictorialBarPage /> },
+  { path: "/modal-test", element: <ModalTestPage /> },
 ];
 
 const AllRoutes = ({ routes }: { routes: PathRouteProps[] }) => (
@@ -58,23 +59,12 @@ const AllRoutes = ({ routes }: { routes: PathRouteProps[] }) => (
     {routes.map(({ path, element }) => (
       <Route
         key={path}
-        path={`${ENV.PUBLIC_URL}${path}`}
+        path={path}
         element={<React.Suspense fallback="...">{element}</React.Suspense>}
       />
     ))}
-    <Route
-      key="/modal-test"
-      path="/modal-test"
-      element={
-        <React.Suspense fallback="...">
-          <ModalTestPage />
-        </React.Suspense>
-      }
-    />
   </Routes>
 );
-
-console.log("ENV", ENV);
 
 const App = () => {
   const { routes, actionSetRoutes: setRoutes } = useRoutesStore();

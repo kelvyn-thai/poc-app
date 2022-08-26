@@ -21,9 +21,6 @@ const FakeAppPortalFrame: React.FC<IProps> = ({ children }) => {
               <Link to={path}>{path}</Link>
             </Menu.Item>
           ))}
-          <Menu.Item>
-            <Link to="/modal-test">/modal-test</Link>
-          </Menu.Item>
         </Menu>
       )}
       <Button
