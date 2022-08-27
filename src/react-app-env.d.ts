@@ -77,3 +77,4 @@ declare module "*.json";
 declare module "d3-tile";
 declare module "@mapbox/togeojson";
 declare module "*.kml";
+declare module "*.mp4";

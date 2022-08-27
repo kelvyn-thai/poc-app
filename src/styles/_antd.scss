@@ -169,7 +169,19 @@
     background-color: transparent;
     border: none;
   }
-  .ant-menu .ant-menu-item a {
-    color: #1890ff;
+  .ant-menu-inline > .ant-menu-item,
+  .ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title,
+  .ant-menu-vertical-left > .ant-menu-item,
+  .ant-menu-vertical-left > .ant-menu-submenu > .ant-menu-submenu-title,
+  .ant-menu-vertical-right > .ant-menu-item,
+  .ant-menu-vertical-right > .ant-menu-submenu > .ant-menu-submenu-title,
+  .ant-menu-vertical > .ant-menu-item,
+  .ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    height: 40px;
+    line-height: unset;
+    margin: 0;
   }
 }

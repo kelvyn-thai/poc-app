@@ -1,0 +1,13 @@
+.menu-container .menu-item {
+  :hover {
+    font-weight: 500 !important;
+  }
+}
+
+.menu-container .menu-item-selected .menu-item-label {
+  font-weight: 500;
+}
+.menu-vertical {
+  flex-direction: column;
+  width: 220px;
+}

@@ -1,0 +1,61 @@
+@import "styles/variables.scss";
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+}
+
+.layout-content {
+  height: calc(100vh - 64px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.app-layout {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.app-layout .ant-layout-sider {
+  background-color: $primary-dark-900;
+  border-right: solid #000 1px;
+}
+
+.app-layout .ant-menu .ant-menu-item-selected {
+  background-color: $primary-dark-1200;
+}
+
+.app-layout .ant-menu .ant-menu-title-content {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+.app-layout .ant-menu-inline > .ant-menu-item {
+  height: 48px;
+}
+.ant-menu-item a {
+  color: #fff;
+  font-size: 12px;
+}
+
+.ant-menu-item a:hover {
+  font-weight: 500;
+}
+
+.app-layout .antd-menu-fold {
+  font-size: 24px;
+}
+
+.ant-layout-header {
+  background-color: $primary-dark-900;
+  height: 64px;
+  border-bottom: solid #000 1px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}

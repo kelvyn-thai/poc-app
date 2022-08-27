@@ -8,7 +8,7 @@ import BreakLine from "components/core/BreakLine";
 import appStyle from "styles/App.module.scss";
 import { Region } from "./Map.typings";
 import { useGeojsonRegions, useRegionListData } from "./Map.hooks";
-import styles from "./Map.style.module.scss";
+import "./Map.style.scss";
 
 const HierachyMap = () => {
   const { height } = useWindowDimensions();
@@ -73,7 +73,7 @@ const HierachyMap = () => {
 
     return (
       <Panel
-        className={`w-fit min-w-[380px] max-w-[400px] h-auto min-h-[150px] ${styles.tooltipHierachyMap}`}
+        className="w-fit min-w-[380px] max-w-[400px] h-auto min-h-[150px]"
         title={upperName}
         panelTitleClassName="text-sm"
         classNameBlockTitle="mb-2"

@@ -1,6 +1,6 @@
 import Panel from "components/core/Panel";
 import React from "react";
-import style from "./Map.style.module.scss";
+import "./Map.style.scss";
 import { useActivedCountry, useQueryAlertsAndTicketsData } from "./Map.hooks";
 
 const AlertsAndTickets = () => {
@@ -19,9 +19,7 @@ const AlertsAndTickets = () => {
       classNameBlockTitle="mb-3"
       panelTitleClassName="text-base"
     >
-      <div
-        className={`grid items-center gap-8 justify-center abs-center ${style.blockAlertsAndTickets} w-[100%]`}
-      >
+      <div className="grid items-center gap-8 justify-center abs-center block-alerts-tickets w-[100%]">
         {[
           {
             label: `Total ${alertsDisplayName}`,
@@ -47,9 +45,7 @@ const AlertsAndTickets = () => {
             <div className="text-sm text-gray-500 font-medium mb-2">
               {label}
             </div>
-            <div
-              className={`grid items-center gap-3 ${style.alertAndTicketExtra}`}
-            >
+            <div className="grid items-center gap-3 alert-tickets-extra">
               <div>{icon}</div>
               <div className="text-2xl sub-font font-medium truncate text-center">
                 {value}

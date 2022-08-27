@@ -16,7 +16,7 @@ import { ChillerPlantSvg } from "./components/Icons/ChillerPlantSvg";
 import { AirSystemSvg } from "./components/Icons/AirSystemSvg";
 import { LightingSvg } from "./components/Icons/LightingSvg";
 import { MechanicalVentilationSvg } from "./components/Icons/MechanicalVentilationSvg";
-import styles from "./styles.module.scss";
+import "./ControlCenter.style.scss";
 import { IControlCenterItem } from "./components/ControlCenterItem/interface";
 
 const controlCenterData: IControlCenterItem[] = [
@@ -134,9 +134,7 @@ const HomePage = React.memo(() => {
         <div>
           <LinesFiveSystemsSvg />
         </div>
-        <div
-          className={`${styles.controlCenterItem} grid w-[1368px] gap-[20px]`}
-        >
+        <div className="control-center-item grid w-[1368px] gap-[20px]">
           {controlCenterData.map((controlCenterItem) => (
             <ControlCenterItem
               key={controlCenterItem.title}

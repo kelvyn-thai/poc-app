@@ -3,7 +3,7 @@ import { ModalControl } from "components/antd/Modal";
 import { useReaderFile } from "hooks/useReaderFile";
 import { FormType, useOperationFormControlled } from "components/antd/Form";
 import { Upload, Button, Input, Form, Row } from "antd";
-import { RcFile, UploadChangeParam, UploadFile } from "antd/lib/upload";
+import { RcFile } from "antd/lib/upload";
 import {
   GEOJSON_INFO_COUNTRY,
   GEOJSON_INFO_DATA,
@@ -12,6 +12,7 @@ import {
   useSelectedCountry,
 } from "pages/hierachy_map";
 import React from "react";
+import ErrorBoundary from "components/core/ErrorBoundary";
 import styles from "./GeoInfo.styles.module.scss";
 
 type GeoInfoDraggerProps = {
@@ -30,71 +31,58 @@ const DraggerForm = ({
   const [form] = Form.useForm();
   const { readData, handleValidateAcceptType } = useReaderFile();
   return (
-    <Form
-      form={form}
-      name="form-operation-geojson"
-      fields={fields}
-      onFieldsChange={(_, allFields) => setFields(allFields)}
-      className={styles.formOperationGeojson}
-    >
-      <Form.Item
-        label={GEOJSON_INFO_RECORD_COLUMN[GEOJSON_INFO_COUNTRY]}
-        name={GEOJSON_INFO_COUNTRY}
-        rules={[{ required: true, message: "Please input country's name!" }]}
+    <ErrorBoundary>
+      <Form
+        form={form}
+        name="form-operation-geojson"
+        fields={fields}
+        onFieldsChange={(_, allFields) => setFields(allFields)}
+        className={styles.formOperationGeojson}
       >
-        <Input disabled={!isCreate} />
-      </Form.Item>
-      <Form.Item
-        label={GEOJSON_INFO_RECORD_COLUMN[GEOJSON_INFO_DATA]}
-        name={GEOJSON_INFO_DATA}
-        rules={[
-          {
-            required: true,
-            message: "Please select a json file!",
-          },
-        ]}
-        valuePropName="fileList"
-        getValueFromEvent={(info: UploadChangeParam<UploadFile<any>>) =>
-          info.fileList
-        }
-      >
-        <Upload.Dragger
-          className="antd-dragger bg-primary-100"
-          beforeUpload={(file: RcFile, files: RcFile[]) => {
-            const isJSONFile = handleValidateAcceptType(
-              file,
-              "application/json"
-            );
-            if (!isJSONFile) {
-              return Upload.LIST_IGNORE;
-            }
-            readData({
-              files,
-              callbackSetData: (jsonData: string) => {
-                const jsonParse = JSON.parse(jsonData);
-                setGeojsonCountry(jsonParse);
-              },
-            });
-            return false;
-          }}
-          multiple={false}
-          maxCount={1}
-          accept="application/json"
+        <Form.Item
+          label={GEOJSON_INFO_RECORD_COLUMN[GEOJSON_INFO_COUNTRY]}
+          name={GEOJSON_INFO_COUNTRY}
+          rules={[{ required: true, message: "Please input country's name!" }]}
         >
-          <p className="ant-upload-drag-icon">
-            <InboxOutlined />
-          </p>
-          <p className="ant-upload-text text-white">
-            Click or drag file to this area to upload
-          </p>
-          <p className="ant-upload-hint text-gray-500">
-            Support for a single or bulk upload. Strictly prohibit
-            <br />
-            from uploading company data or other band files
-          </p>
-        </Upload.Dragger>
-      </Form.Item>
-    </Form>
+          <Input disabled={!isCreate} />
+        </Form.Item>
+        <Form.Item label={GEOJSON_INFO_RECORD_COLUMN[GEOJSON_INFO_DATA]}>
+          <Upload.Dragger
+            className="antd-dragger bg-primary-100"
+            beforeUpload={(file: RcFile, files: RcFile[]) => {
+              const isJSONFile = handleValidateAcceptType(
+                file,
+                "application/json"
+              );
+              if (!isJSONFile) {
+                return Upload.LIST_IGNORE;
+              }
+              readData({
+                files,
+                callbackSetData: (jsonData: string) => {
+                  const jsonParse = JSON.parse(jsonData);
+                  setGeojsonCountry(jsonParse);
+                },
+              });
+              return false;
+            }}
+            multiple={false}
+            maxCount={1}
+            accept="application/json"
+          >
+            <p className="ant-upload-drag-icon">
+              <InboxOutlined />
+            </p>
+            <p className="ant-upload-text">
+              Click or drag file to this area to upload
+            </p>
+            <p className="ant-upload-hint">
+              Support for a single or bulk upload.
+            </p>
+          </Upload.Dragger>
+        </Form.Item>
+      </Form>
+    </ErrorBoundary>
   );
 };
 
