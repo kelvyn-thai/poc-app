@@ -2,7 +2,7 @@ import Panel from "components/core/Panel";
 import D3Ranking from "components/charts/Ranking";
 import React from "react";
 import { Button } from "antd";
-import styles from "./Map.style.module.scss";
+import "./Map.style.scss";
 import { useActivedCountry, useEnergyRankingData } from "./Map.hooks";
 import { formatterValueToLocaleString } from "./Map.utils";
 
@@ -44,7 +44,7 @@ const Ranking = () => {
         </div>
       }
       isLoading={isLoading}
-      classNameBlockTitle={`${styles.blockRankingTitle} mb-3`}
+      classNameBlockTitle="block-ranking-title mb-3"
       panelTitleClassName="text-base"
     >
       <D3Ranking

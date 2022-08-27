@@ -21,8 +21,8 @@ export const createHexbinChart = async ({
 }: {
   points: HexbinPoints;
   geojson: d3.GeoPermissibleObjects | any;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
   svg: SVGSVGElement;
   container: HTMLDivElement;
 }) => {

@@ -1,13 +1,17 @@
+.map-page {
+  height: 100%;
+}
+
 .extra {
   grid-template-columns: repeat(3, minmax(220px, 1fr));
   width: 100%;
 }
 
-.alertAndTicketExtra {
+.alert-tickets-extra {
   grid-template-columns: min-content 1fr min-content;
 }
 
-.bgFlash {
+.bg-flash {
   position: absolute;
   left: 0;
   top: 0;
@@ -21,10 +25,10 @@
   pointer-events: none;
 }
 
-.blockRankingTitle {
+.block-ranking-title {
   grid-template-columns: 1fr 2fr;
 }
 
-.blockAlertsAndTickets {
+.block-alerts-tickets {
   grid-template-columns: 1fr 1fr;
 }

@@ -1,6 +1,7 @@
 import React from "react";
-import { DataResourceChart } from "pages/data_resource";
+import D3Bubble from "components/charts/D3Bubble";
+import bubbleJson from "./bubble_json.json";
 
-const BubbleChart = () => <DataResourceChart type="bubble" />;
+const BubbleChart = () => <D3Bubble data={bubbleJson} />;
 
 export default React.memo(BubbleChart);

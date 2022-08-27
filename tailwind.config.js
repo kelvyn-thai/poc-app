@@ -20,6 +20,8 @@ module.exports = {
         800: "#a4a5b3",
         900: "#212029",
         1000: "#11263c",
+        1100: "#3a393f",
+        1200: "#141318",
       },
       "custom-gray": {
         100: "#e9e9e9",
@@ -28,5 +30,4 @@ module.exports = {
     },
   },
   plugins: [],
-  important: true,
 };

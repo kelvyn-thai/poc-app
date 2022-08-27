@@ -7,8 +7,8 @@ interface IProps extends IBaseD3ChartProps {
   data: {
     points: HexbinPoints;
     geojson: d3.GeoPermissibleObjects | any;
-    width: number;
-    height: number;
+    width?: number;
+    height?: number;
   };
 }
 
