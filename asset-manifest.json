@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/poc-app/static/css/main.ca71a34f.css",
-    "main.js": "/poc-app/static/js/main.730ca851.js",
+    "main.js": "/poc-app/static/js/main.f1820045.js",
     "static/js/410.96cea76b.chunk.js": "/poc-app/static/js/410.96cea76b.chunk.js",
     "static/js/370.d420bbae.chunk.js": "/poc-app/static/js/370.d420bbae.chunk.js",
     "static/js/862.171487aa.chunk.js": "/poc-app/static/js/862.171487aa.chunk.js",
@@ -44,7 +44,7 @@
     "static/media/nightlight-off.png": "/poc-app/static/media/nightlight-off.a59e27ca26d6b3d1beba.png",
     "index.html": "/poc-app/index.html",
     "main.ca71a34f.css.map": "/poc-app/static/css/main.ca71a34f.css.map",
-    "main.730ca851.js.map": "/poc-app/static/js/main.730ca851.js.map",
+    "main.f1820045.js.map": "/poc-app/static/js/main.f1820045.js.map",
     "410.96cea76b.chunk.js.map": "/poc-app/static/js/410.96cea76b.chunk.js.map",
     "370.d420bbae.chunk.js.map": "/poc-app/static/js/370.d420bbae.chunk.js.map",
     "862.171487aa.chunk.js.map": "/poc-app/static/js/862.171487aa.chunk.js.map",
@@ -69,6 +69,6 @@
   },
   "entrypoints": [
     "static/css/main.ca71a34f.css",
-    "static/js/main.730ca851.js"
+    "static/js/main.f1820045.js"
   ]
 }
