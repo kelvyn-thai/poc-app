@@ -1,43 +1,56 @@
-
 ## Available scripts
 
 In the project directory, you can run:
 
-| Command   |        Description        |
-| :-------- | :-----------------------: |
-| npm       |       Install NPM.        |
-| npm start | Runs the app on port 8080 |
+| Command        |        Description        |
+| :------------- | :-----------------------: |
+| npm install    |       Install NPM.        |
+| npm start      | Runs the app on port 8080 |
+| npm run build  |         Build app         |
+| npm run deploy |        Deploy app         |
 
 ## Main Stack
 
-- Build UI by React core: https://reactjs.org + ejecting CRA template
+- Build UI by React core: https://reactjs.org + CRA template typescript
 - Manage state application by Zustand: https://github.com/pmndrs/zustand
+- Asynchronous state management by react-query: https://tanstack.com/query/v4/docs/overview
 - Bundle application by Webpack: https://webpack.js.org
-- UI core library from buildings: [@citydev/ui-library](https://github.com/edsbuildings/ui-libary/blob/main/packages/ui-library/README.md)
+- UI core library: combine between [ant-design](https://ant.design/docs/react/introduce) + make by hand.
 - CSS framework: https://tailwindcss.com
-- Find and fix problems in JavaScript code: https://eslint.org/
-- Lint your commit messages, run tests, lint code,.. : https://typicode.github.io/husky/#/
+- Find, fix, format, v...v problems in JavaScript code :
+  - Eslint: https://eslint.org/
+  - Husky: https://typicode.github.io/husky
+  - Lint-staged: https://github.com/okonet/lint-staged
+  - Prettier: https://prettier.io/
 
 ## Deploy
 
-- Deploy: https://github.com/edsbuildings/buildings-frontend/blob/master/documentation/frontend_deployment_under_the_hood.md
+- Github Pages: https://pages.github.com/
 - Docker: https://www.docker.com/
 
 ## Production
 
-- http://poc-app.apaas-ppe1.eniot.io/
-- https://https://app-portal-ppe1.envisioniot.com/portal/253a91dc-ad08-4dc4-b813-9fbbb2047c13/control_center
+- https://phattnh.github.io/poc-app/
 
 ## Developer
 
 - From source ([src](./src/)) app folder:
-  - [assets](./src/assets/): assets of application such as fonts, images,..
+
+  - [assets](./src/assets/): assets of application such as fonts, images, fonts,...
   - [components](./src/components/): define all component used to build application
   - [i18n](./src/i18n/): multiple language
   - [pages](./src/pages/): all pages - each page same as module
     - index.tsx or PageName.tsx: define Page
     - zustand: manage state
-    - \*.module.scss: for stylesheet or we can use tailwind
+    - \*.scss: for stylesheet or we can use tailwind
     - components: child component or features
     - utils: utils logics
   - [zustand-store](./src/zustand-store/): define zustand store used for component / feature / page
+  - [database](./src/database/): Storage on [Indexed DB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+  - [hooks](./src/hooks/): declare some sharing hooks
+  - [http-request](./src/http-request/): create http request by [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+
+- From components(UI) ([components](./src/components)):
+  - antd: Custom some ant-design component
+  - charts: Combine many chart's library [d3](https://github.com/d3/d3/wiki), [echarts](https://echarts.apache.org/en/api.html#echarts), v...v
+  - core: Basic / core component make by hand
