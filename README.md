@@ -5,13 +5,14 @@ In the project directory, you can run:
 | Command        |        Description        |
 | :------------- | :-----------------------: |
 | npm install    |       Install NPM.        |
-| npm start      | Runs the app on port 8080 |
+| npm start      | Runs the app on port 3000 |
 | npm run build  |         Build app         |
 | npm run deploy |        Deploy app         |
 
 ## Main Stack
 
 - Build UI by React core: https://reactjs.org + CRA template typescript
+- Manage build, deploy, start,...: [react-scripts](https://www.npmjs.com/package/react-scripts)
 - Manage state application by Zustand: https://github.com/pmndrs/zustand
 - Asynchronous state management by react-query: https://tanstack.com/query/v4/docs/overview
 - Bundle application by Webpack: https://webpack.js.org
