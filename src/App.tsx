@@ -1,11 +1,8 @@
 import { Routes, Route, PathRouteProps, HashRouter } from "react-router-dom";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import React from "react";
-import { getAppInfo, getUserInfo } from "sdk/esb-app-portal-sdk";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AppLayout from "components/core/AppLayout";
-import { useAccountStore } from "zustand-store/account";
-import { getOrganizationState } from "zustand-store/organization";
 import { useRoutesStore } from "zustand-store/routes";
 import ErrorBoundary from "components/core/ErrorBoundary";
 import styles from "styles/App.module.scss";
@@ -61,21 +58,10 @@ const AllRoutes = ({ routes }: { routes: PathRouteProps[] }) => (
 
 const App = () => {
   const { routes, actionSetRoutes: setRoutes } = useRoutesStore();
-  const { setMenuList, setPermissionList, login } = useAccountStore();
-  const { fetchOrganizations } = getOrganizationState();
-  const handleAuthentication = async () => {
-    const user = await getUserInfo();
-    login(user);
-    fetchOrganizations();
-    const app = await getAppInfo();
-    setMenuList(app.menus);
-    setPermissionList(app.permissions);
-  };
   const handleLoadRoutes = React.useCallback(() => {
     setRoutes(allRoutes);
   }, []);
   React.useEffect(() => {
-    handleAuthentication();
     handleLoadRoutes();
   }, []);
   return (
