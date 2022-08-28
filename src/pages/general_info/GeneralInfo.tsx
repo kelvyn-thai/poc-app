@@ -25,9 +25,7 @@ const GeneralInfoTabs = React.memo(() => {
       })),
     []
   );
-  return (
-    <Tabs tabPanes={tabPanes} onChangeTab={onChangeTab} />
-  );
+  return <Tabs tabPanes={tabPanes} onChangeTab={onChangeTab} />;
 });
 
 export const ReportingPeriod = React.memo(() => {

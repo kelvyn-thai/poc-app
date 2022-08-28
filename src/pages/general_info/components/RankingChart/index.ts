@@ -1,3 +1,3 @@
-import RankingChart from './RankingChart';
+import RankingChart from "./RankingChart";
 
 export default RankingChart;

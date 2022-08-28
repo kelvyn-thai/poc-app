@@ -1,3 +1,3 @@
-import Panels from './Panels';
+import Panels from "./Panels";
 
 export default Panels;
