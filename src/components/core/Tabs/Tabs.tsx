@@ -1,21 +1,24 @@
 import React from "react";
 import BreakLine from "components/core/BreakLine";
-
-interface TabItem {
-  key: string;
-  value: string;
-  children: React.ReactNode | React.ReactElement | any;
-}
+import { TabItem } from "./Tabs.typings";
 
 interface IProps {
   tabItems: TabItem[];
   onClickTabItem?: (value: string) => any;
+  hasDivideLine?: boolean;
+  className?: string;
 }
 
-const TabList: React.FC<IProps> = ({ tabItems, onClickTabItem }) => {
+const TabList: React.FC<
+  IProps &
+    React.DetailedHTMLProps<
+      React.HTMLAttributes<HTMLDivElement>,
+      HTMLDivElement
+    >
+> = ({ tabItems, onClickTabItem, hasDivideLine, className, ...rest }) => {
   const [defaultTab, setDefaultTab] = React.useState<string>(tabItems[0].key);
   return (
-    <div className="tab">
+    <div className={`tab-list ${className}`} {...rest}>
       <div
         className="tab-header grid items-center gap-4 relative"
         style={{
@@ -40,7 +43,9 @@ const TabList: React.FC<IProps> = ({ tabItems, onClickTabItem }) => {
             {value}
           </div>
         ))}
-        <BreakLine className="absolute bottom-0 left-0 h-[2px] opacity-10" />
+        {hasDivideLine && (
+          <BreakLine className="absolute bottom-0 left-0 h-[2px] opacity-10" />
+        )}
       </div>
       <div className="tab-content mt-5">
         {tabItems.find((t) => t.key === defaultTab)?.children}
@@ -51,6 +56,8 @@ const TabList: React.FC<IProps> = ({ tabItems, onClickTabItem }) => {
 
 TabList.defaultProps = {
   onClickTabItem: undefined,
+  hasDivideLine: true,
+  className: "",
 };
 
 export default React.memo(TabList);

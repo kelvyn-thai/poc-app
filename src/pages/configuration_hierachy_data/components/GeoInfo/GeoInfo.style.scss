@@ -1,0 +1,15 @@
+@import "styles/variables";
+
+.ant-form-item-row {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 20px;
+}
+
+.ant-upload.ant-upload-drag p.ant-upload-text {
+  color: #fff;
+}
+
+.ant-upload.ant-upload-drag p.ant-upload-hint {
+  color: $primary-dark-800;
+}

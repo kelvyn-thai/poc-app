@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import React from "react";
-import appStyle from "styles/App.module.scss";
 
 const Loading: React.FC<
   React.DetailedHTMLProps<
@@ -12,7 +11,7 @@ const Loading: React.FC<
   }
 > = ({ className, isCenterAbsolute, ...rest }) => (
   <div
-    className={`${isCenterAbsolute && appStyle.absCenter} ${classNames(
+    className={`${isCenterAbsolute && 'abs-center'} ${classNames(
       className
     )}`}
     {...rest}

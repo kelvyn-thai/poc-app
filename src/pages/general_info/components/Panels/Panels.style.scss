@@ -1,0 +1,8 @@
+@import "styles/variables.scss";
+
+.panel-item {
+  grid-template-columns: min-content 1fr;
+}
+.panel-item-hook {
+  grid-template-columns: min-content 14px;
+}

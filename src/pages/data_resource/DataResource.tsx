@@ -2,6 +2,7 @@ import Button from "components/core/Button";
 import React from "react";
 import { useModalStore } from "components/core/Modal";
 import Dropdown from "components/core/Dropdown";
+import { Space } from "antd";
 import Content from "./DataResource.ModalContent";
 import Table from "./DataResource.Table";
 import { ChartOption } from "./DataResource.typings";
@@ -25,23 +26,25 @@ const DataResource = () => {
   );
   return (
     <div className="bg-transparent text-white">
-      <Dropdown
-        defaultSelected={option}
-        onSelectOption={(value) => {
-          const type = value as ChartOption;
-          actionSetOption(type);
-          actionSetChartName("");
-          handleGetCharts({ type });
-        }}
-        options={chartOptions}
-      />
-      <Button
-        title="+ New data resource"
-        onClick={() =>
-          setVisibleModal({ isVisible: true, content: <Content /> })
-        }
-        className="mb-4"
-      />
+      <Space>
+        <Dropdown
+          defaultSelected={option}
+          onSelectOption={(value) => {
+            const type = value as ChartOption;
+            actionSetOption(type);
+            actionSetChartName("");
+            handleGetCharts({ type });
+          }}
+          options={chartOptions}
+        />
+        <Button
+          title="+ New data resource"
+          onClick={() =>
+            setVisibleModal({ isVisible: true, content: <Content /> })
+          }
+          className="mb-4"
+        />
+      </Space>
       <Table />
     </div>
   );

@@ -70,7 +70,6 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   min-width: 1150px;
-
   * {
     font-family: "Helvetica-Neue";
     font-style: normal;
@@ -83,35 +82,31 @@ body {
     display: none; /* for Chrome, Safari, and Opera */
   }
 
-  :global {
-    .flex {
-      display: flex;
-    }
-    .flex-center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .absCenterVer {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    .layoutPadding20 {
-      padding: 20px 20px 0 20px;
-    }
-    .mB16 {
-      margin-bottom: 16px;
-    }
-    .abs-center {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: auto;
-      position: absolute;
-    }
-    .sub-font {
-      font-family: "BPDS_Iconfont";
-    }
+  .box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 7px 29px 0px;
+  }
+
+  .flex {
+    display: flex;
+  }
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .abs-center-ver {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .abs-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    position: absolute;
+  }
+  .sub-font {
+    font-family: "BPDS_Iconfont";
   }
 }
