@@ -5,7 +5,6 @@ import Panel from "components/core/Panel";
 import isEqual from "lodash/isEqual";
 import toUpper from "lodash/toUpper";
 import BreakLine from "components/core/BreakLine";
-import appStyle from "styles/App.module.scss";
 import { Region } from "./Map.typings";
 import { useGeojsonRegions, useRegionListData } from "./Map.hooks";
 import "./Map.style.scss";
@@ -68,7 +67,7 @@ const HierachyMap = () => {
         </>
       );
     } else {
-      child = <div className={`${appStyle.absCenter}`}>Not data yet!</div>;
+      child = <div className="abs-center">Not data yet!</div>;
     }
 
     return (

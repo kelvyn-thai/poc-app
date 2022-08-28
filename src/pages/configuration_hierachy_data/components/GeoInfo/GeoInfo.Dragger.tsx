@@ -13,7 +13,7 @@ import {
 } from "pages/hierachy_map";
 import React from "react";
 import ErrorBoundary from "components/core/ErrorBoundary";
-import styles from "./GeoInfo.styles.module.scss";
+import "./GeoInfo.style.scss";
 
 type GeoInfoDraggerProps = {
   isCreate: boolean;
@@ -37,7 +37,6 @@ const DraggerForm = ({
         name="form-operation-geojson"
         fields={fields}
         onFieldsChange={(_, allFields) => setFields(allFields)}
-        className={styles.formOperationGeojson}
       >
         <Form.Item
           label={GEOJSON_INFO_RECORD_COLUMN[GEOJSON_INFO_COUNTRY]}

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import "styles/tailwind.css";
 import "antd/dist/antd.min.css";
-
+import "styles/App.scss";
 /**
  * PingFang-SC
  */

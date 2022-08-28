@@ -5,10 +5,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AppLayout from "components/core/AppLayout";
 import { useRoutesStore } from "zustand-store/routes";
 import ErrorBoundary from "components/core/ErrorBoundary";
-import styles from "styles/App.module.scss";
 import ModalAntd from "components/antd/Modal";
 import Modal from "components/core/Modal";
 import HomePage from "pages/home";
+import GeneralInfoPage from "pages/general_info";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -38,6 +38,7 @@ const allRoutes: PathRouteProps[] = [
   { path: "/hexbin-chart", element: <HexbinChartPage /> },
   { path: "/control-center", element: <ControlCenterPage /> },
   { path: "/data-resource", element: <DataResourcePage /> },
+  { path: "/general-info", element: <GeneralInfoPage /> },
   { path: "/pie-chart", element: <PieChartPage /> },
   { path: "/hierachy-map", element: <MapPage /> },
   { path: "/configuration", element: <AntdConfigurationPage /> },
@@ -66,18 +67,16 @@ const App = () => {
   }, []);
   return (
     <ErrorBoundary>
-      <div className={styles.appContainer}>
-        <QueryClientProvider client={queryClient}>
-          <ReactQueryDevtools initialIsOpen />
-          <HashRouter>
-            <AppLayout>
-              <AllRoutes routes={routes} />
-            </AppLayout>
-            <ModalAntd />
-            <Modal />
-          </HashRouter>
-        </QueryClientProvider>
-      </div>
+      <QueryClientProvider client={queryClient}>
+        <ReactQueryDevtools initialIsOpen />
+        <HashRouter>
+          <AppLayout>
+            <AllRoutes routes={routes} />
+          </AppLayout>
+          <ModalAntd />
+          <Modal />
+        </HashRouter>
+      </QueryClientProvider>
     </ErrorBoundary>
   );
 };
