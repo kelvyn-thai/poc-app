@@ -11,9 +11,7 @@ const Loading: React.FC<
   }
 > = ({ className, isCenterAbsolute, ...rest }) => (
   <div
-    className={`${isCenterAbsolute && 'abs-center'} ${classNames(
-      className
-    )}`}
+    className={`${isCenterAbsolute && "abs-center"} ${classNames(className)}`}
     {...rest}
   >
     <i className="fa-solid fa-spinner fa-spin-pulse fa-2xl" />
