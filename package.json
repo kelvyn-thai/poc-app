@@ -99,7 +99,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eslint": "eslint \"**/*.{ts,tsx}\"",
     "prepare": "husky install",
     "predeploy": "npm run build",
