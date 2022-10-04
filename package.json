@@ -75,6 +75,7 @@
     "react-dom": "^18.1.0",
     "react-refresh": "^0.11.0",
     "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
     "resolve": "^1.20.0",
     "resolve-url-loader": "^4.0.0",
     "sass": "^1.51.0",
@@ -93,17 +94,17 @@
     "webpack-dev-server": "^4.6.0",
     "webpack-manifest-plugin": "^4.0.2",
     "workbox-webpack-plugin": "^6.4.1",
-    "zustand": "^4.0.0-rc.1",
-    "react-scripts": "5.0.1"
+    "zustand": "^4.0.0-rc.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "node scripts/build",
     "test": "jest",
     "eslint": "eslint \"**/*.{ts,tsx}\"",
     "prepare": "husky install",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "analyzer": "react-scripts build && source-map-explorer build/static/js/*.js"
   },
   "eslintConfig": {
     "extends": [
@@ -204,7 +205,11 @@
     "gh-pages": "^4.0.0",
     "husky": "^8.0.1",
     "lint-staged": ">=10",
-    "prettier": "2.6.2"
+    "preload-css-webpack-plugin": "^0.2.0",
+    "prettier": "2.6.2",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "source-map-explorer": "^2.5.3",
+    "webpack-bundle-analyzer": "^4.6.1"
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint --fix"
