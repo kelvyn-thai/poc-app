@@ -97,13 +97,13 @@
     "zustand": "^4.0.0-rc.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "node scripts/build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "test": "jest",
     "eslint": "eslint \"**/*.{ts,tsx}\"",
     "prepare": "husky install",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "webpack-analyzer": "REACT_APP_ENVIROMENT='predeploy' react-app-rewired build",
     "analyzer": "react-scripts build && source-map-explorer build/static/js/*.js"
   },
   "eslintConfig": {
@@ -181,6 +181,7 @@
     ]
   },
   "devDependencies": {
+    "@principalstudio/html-webpack-inject-preload": "^1.2.7",
     "@types/d3": "^7.4.0",
     "@types/d3-drag": "^3.0.1",
     "@types/d3-geo": "^3.0.2",
@@ -206,10 +207,13 @@
     "husky": "^8.0.1",
     "lint-staged": ">=10",
     "preload-css-webpack-plugin": "^0.2.0",
+    "preload-webpack-plugin": "^2.3.0",
     "prettier": "2.6.2",
     "progress-bar-webpack-plugin": "^2.1.0",
+    "react-app-rewired": "^2.2.1",
     "source-map-explorer": "^2.5.3",
-    "webpack-bundle-analyzer": "^4.6.1"
+    "webpack-bundle-analyzer": "^4.6.1",
+    "webpack-cli": "^4.10.0"
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint --fix"

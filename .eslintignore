@@ -6,3 +6,4 @@ config
 deployment
 scripts
 react-rewrited-scripts
+config-overrides.js
